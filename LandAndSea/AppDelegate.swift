@@ -1,5 +1,8 @@
 
 import UIKit
+import Parse
+import ParseUI
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -9,6 +12,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Parse.setApplicationId("G4DelaW8ovyeGn5m6pQleoh1kS26jhKHOyay6B6V", clientKey:"zICY4dzRQCPYxYUGB74ieLVOJQStrt84x9OihJqK")
+        
         return true
     }
 
@@ -33,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 

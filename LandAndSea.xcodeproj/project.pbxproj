@@ -317,6 +317,7 @@
 		365AF9E91AE3869A0008FC99 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		365AF9EA1AE3869A0008FC99 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		365AF9EB1AE3869A0008FC99 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		365AF9F71AE387430008FC99 /* LandAndSea-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LandAndSea-Bridging-Header.h"; sourceTree = "<group>"; };
 		36C674AE1AE242310076C996 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		36E2888C1AE3838E00224504 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		36E2888D1AE3838E00224504 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -543,6 +544,7 @@
 		360D26F41AD296020059FF7D /* LandAndSea */ = {
 			isa = PBXGroup;
 			children = (
+				365AF9F71AE387430008FC99 /* LandAndSea-Bridging-Header.h */,
 				365AF9D51AE385E60008FC99 /* Bolts.framework */,
 				365AF9D61AE385E60008FC99 /* Parse.framework */,
 				365AF9D71AE385E60008FC99 /* ParseCrashReporting.framework */,

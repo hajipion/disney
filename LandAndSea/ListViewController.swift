@@ -1,5 +1,8 @@
 
 import UIKit
+import Parse
+import ParseUI
+import Bolts
 
 class ListViewController: ScrollableTabsViewController, UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate {
     
@@ -43,7 +46,6 @@ class ListViewController: ScrollableTabsViewController, UIScrollViewDelegate, UI
         return showName[areaID].count
         
     }
-    
     
     // セルの内容を変更
     func tableView(listTableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -143,6 +145,44 @@ class ListViewController: ScrollableTabsViewController, UIScrollViewDelegate, UI
         
         // 選択ハイライトを解除
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+    }
+    
+    var timelineData:NSMutableArray = NSMutableArray()
+    var messagesArray = [String]()
+    
+    // beta5からinitの前方にrequiredが必要になった
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    // ロード
+    func loadData() {
+        
+        var object = PFObject(className: "TestClass")
+        object.addObject("Bananaaaaaaaa", forKey: "favoriteFood")
+        object.addObject("Chocolate", forKey: "favoriteIceCream")
+        object.saveInBackground()
+        
+        var query = PFQuery(className: "TestClass")
+        query.orderByAscending("createdAt")
+        
+        timelineData.removeAllObjects()
+        
+        // call databases
+        var findTimelineData:PFQuery = PFQuery(className: "TestClass")
+        
+        query.findObjectsInBackgroundWithBlock {
+            (object, error) -> Void in
+            
+            for messageObject in object! {
+                let messageText:String? = (messageObject as! PFObject)["favoriteFood"] as? String
+                if messageText != nil {
+                    self.messagesArray.append(messageText!)
+                }
+            }
+            println(self.messagesArray)
+        }
         
     }
     

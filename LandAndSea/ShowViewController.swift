@@ -5,6 +5,8 @@ class ShowViewController: ListViewController, UIScrollViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         
+        super.loadData()
+        
         super.tabSelected = "Show"
         
         super.areaName = [

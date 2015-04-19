@@ -32,6 +32,7 @@ class CardViewController: ScrollableTabsViewController, UIScrollViewDelegate, UI
         
         scrollViewMain.addSubview(collectionView)
         
+        
     }
     
     /* ------------------------ セル --------------------------*/
